@@ -9,13 +9,20 @@ if($method == "POST"){
 	
 	$text = $json->result->parameters->text;
 	
+	$commandNum = rand(2,5);
+	
+	$array = array("a", "b", "c", "d", "e", "f");
+	$responseArray = array("listen closely");
+	
+	for($x = 0; $x < $commandNum; $x++){
+	$randomIndex = rand(0, 5);
+		array_push($responseArray, $array[$randomIndex]); 
+	}
+	
 	switch ($text){
 		case 'hi':
-			$speech = "Hi, Nice to meet you";
-			break;
-			
-		case 'bye':
-			$speech = "Bye, good night";
+			array_push($responseArray, "Did you lose?");
+			$speech = implode("... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...", $responseArray);
 			break;
 			
 		case 'anything':
