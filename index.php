@@ -23,7 +23,7 @@ if($method == "POST"){
 		case 'hi':
 			$randomIndex = rand(0, 5);
 			array_push($responseArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
-			array_push($responseArray, "Uh Oh, did you ...", $array[randomIndex], "If you did, you're out.");
+			array_push($responseArray, "... ... ... ... ... Uh Oh, did you ...", $array[$randomIndex], "If you did, ... you're out.");
 			$speech = implode("... ...", $responseArray);
 			break;
 			
