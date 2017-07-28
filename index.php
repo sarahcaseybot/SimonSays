@@ -12,6 +12,7 @@ if($method == "POST"){
 	$commandNum = rand(2,5);
 	
 	$array = array("a", "b", "c", "d", "e", "f");
+	$fruitArray("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 	$responseArray = array("listen closely");
 	
 	for($x = 0; $x < $commandNum; $x++){
@@ -22,7 +23,6 @@ if($method == "POST"){
 	switch ($text){
 		case 'hi':
 			$randomIndex = rand(0, 5);
-			$fruitArray("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 			array_push($responseArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
 			array_push($responseArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
 			array_push($responseArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
