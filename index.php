@@ -22,7 +22,7 @@ if($method == "POST"){
 	switch ($text){
 		case 'hi':
 			array_push($responseArray, "Did you lose?");
-			$speech = responseArray;
+			$speech = $responseArray;
 			break;
 			
 		case 'anything':
