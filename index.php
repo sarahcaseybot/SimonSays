@@ -22,8 +22,11 @@ if($method == "POST"){
 	switch ($text){
 		case 'hi':
 			$randomIndex = rand(0, 5);
+			$fruitArray("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 			array_push($responseArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
-			array_push($responseArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "If you did, ... ... you're out.");
+			array_push($responseArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
+			array_push($responseArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
+
 			$speech = implode("... ...", $responseArray);
 			break;
 			
