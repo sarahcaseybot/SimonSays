@@ -12,7 +12,7 @@ if($method == "POST"){
 	$commandNum = rand(2,5);
 	
 	$array = array("a", "b", "c", "d", "e", "f");
-	$fruitArray("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
+	$fruitArray = array("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 	$responseArray = array("listen closely");
 	
 	for($x = 0; $x < $commandNum; $x++){
