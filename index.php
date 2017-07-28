@@ -21,7 +21,8 @@ if($method == "POST"){
 	
 	switch ($text){
 		case 'hi':
-			array_push($responseArray, "Did you lose?");
+			$randomIndex = rand(0, 5);
+			array_push($responseArray, "... ... ... ... ... ... ... ...", $array[$randomIndex], " ... ... ... ... ... ... Did you lose?");
 			$speech = implode("... ...", $responseArray);
 			break;
 			
