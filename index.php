@@ -16,13 +16,13 @@ if($method == "POST"){
 	
 	for($x = 0; $x < $commandNum; $x++){
 	$randomIndex = rand(0, 5);
-		array_push($responseArray, $array[$randomIndex]); 
+		array_push($responseArray, "Google Says...", $array[$randomIndex]); 
 	}
 	
 	switch ($text){
 		case 'hi':
 			array_push($responseArray, "Did you lose?");
-			$speech = implode("... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...", $responseArray);
+			$speech = implode("... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...", $responseArray);
 			break;
 			
 		case 'anything':
