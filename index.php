@@ -29,9 +29,9 @@ if($method == "POST"){
 			array_push($displayTextArray, "Uh oh... did you ", $array[$randomIndex], "? If you did, you're out. ");
 			array_push($displayTextArray, "Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], ". To end the game, say stop.");
 			
-			array_push($speechTextArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
-			array_push($speechTextArray, "... ... ... ... ... Uh oh... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
-			array_push($speechTextArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop. </speak>");
+			array_push($speechTextArray, " ", $array[$randomIndex]);
+			array_push($speechTextArray, "<break time=\"2s\"/> Uh Oh, <break time=\"1s\"/> did you ...", $array[$randomIndex], "? If you did, <break time=\"1s\"/> you're out.");
+			array_push($speechTextArray, "<break time=\"2s\"/> Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "<break time=\"2s\"/> To end the game, say stop. </speak>");
 
 			$displayText = implode("", $displayTextArray);
 			$speech = implode("... ...", $speechTextArray);
