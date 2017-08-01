@@ -28,8 +28,10 @@ if($method == "POST"){
 			array_push($displayTextArray, "Oh, no!.. did you ", $array[$randomCommandIndex], "? If you did, you're out. ");
 			array_push($displayTextArray, "Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], ". To end the game, say stop.");
 			
+			$concatString = "<break time=\"2s\"/> Oh, no! <break time=\"1s\"/> did you ..." . $array[$randomCommandIndex];
+			$concatString .= "? If you did, <break time=\"1s\"/> you're out.";
 			array_push($speechTextArray, " <break time=\"2s\"/> ", $array[$randomCommandIndex], ". ");
-			array_push($speechTextArray, "<break time=\"2s\"/> Oh, no! <break time=\"1s\"/> did you ..." . $array[$randomCommandIndex] . "? If you did, <break time=\"1s\"/> you're out.");
+			array_push($speechTextArray, $concatString );
 			array_push($speechTextArray, "<break time=\"2s\"/> Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "<break time=\"2s\"/> To end the game, say stop. </speak>");
 			$displayText = implode("", $displayTextArray);
 			$speech = implode("<break time=\"1s\"/>", $speechTextArray);
