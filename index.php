@@ -37,11 +37,6 @@ if($method == "POST"){
 			$speech = implode("<break time=\"1s\"/>", $speechTextArray);
 			break;
 			
-		case 'anything':
-			$speech = "Yes, you can type anything here.";
-			$displayText = "Yes, you can type anything here.";
-			break;
-			
 		default:
 			$speech = "Sorry, I didn't get that. Please ask me something else.";
 			$displayText = "Sorry, I didn't get that. Please ask me something else.";
