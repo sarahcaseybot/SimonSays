@@ -13,21 +13,20 @@ if($method == "POST"){
 	
 	$array = array("a", "b", "c", "d", "e", "f");
 	$fruitArray = array("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
-	$speechTextArray = array("listen closely");
+	$speechTextArray = array("<speak> Listen closely");
 	
 	for($x = 0; $x < $commandNum; $x++){
 	$randomIndex = rand(0, 5);
-		array_push($speechTextArray, "... ... ... ... ... ... ... ... ... ... Google Says...", $array[$randomIndex]); 
+		array_push($speechTextArray, "<break time=\"3s\"/> Google Says...", $array[$randomIndex]); 
 	}
 	
 	switch ($text){
 		case 'hi':
 			$randomIndex = rand(0, 5);
-			array_push($speechTextArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
-			array_push($speechTextArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
-			array_push($speechTextArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
-
-			$speech = implode("... ...", $speechTextArray);
+			array_push($speechArray, "<break time=\"2s\"/> Uh Oh, <break time=\"1s\"/> did you ...", $array[$randomIndex], "? If you did, <break time=\"1s\"/> you're out.");
+			array_push($speechArray, "<break time=\"2s\"/> Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "<break time=\"2s\"/> To end the game, say stop. </speak>");
+			
+			$speech = implode("<break time=\"1s\"/>", $speechText);
 			break;
 			
 		case 'anything':
