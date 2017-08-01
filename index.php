@@ -13,37 +13,35 @@ if($method == "POST"){
 	
 	$array = array("a", "b", "c", "d", "e", "f");
 	$fruitArray = array("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
-	$displayTextArray = array("Listen closely.");
-	$speechArray = array("<speak> Listen closely");
+	$responseArray = array("listen closely");
 	
 	for($x = 0; $x < $commandNum; $x++){
 	$randomIndex = rand(0, 5);
-		array_push($displayTextArray, "Google Says...", $array[$randomIndex], ", ");
-		array_push($speechArray, "<break time=\"3s\"/> Google Says...", $array[$randomIndex]); 
+		array_push($responseArray, "... ... ... ... ... ... ... ... ... ... Google Says...", $array[$randomIndex]); 
 	}
 	
 	switch ($text){
 		case 'hi':
 			$randomIndex = rand(0, 5);
-			array_push($displayTextArray, "Uh Oh,... did you ", $array[$randomIndex], "? If you did, you're out.");
-			array_push($displayTextArray, "Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], ". To end the game, say stop.");
+			array_push($responseArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
+			array_push($responseArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
+			array_push($responseArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
+
+			$speech = implode("... ...", $responseArray);
+			break;
 			
-			array_push($speechArray, "<break time=\"2s\"/> Uh Oh, <break time=\"1s\"/> did you ...", $array[$randomIndex], "? If you did, <break time=\"1s\"/> you're out.");
-			array_push($speechArray, "<break time=\"2s\"/> Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "<break time=\"2s\"/> To end the game, say stop. </speak>");
-			
-			$displayText = implode("", $displayTextArray);
-			$speechText = implode("<break time=\"1s\"/>", $speechText);
+		case 'anything':
+			$speech = "Yes, you can type anything here.";
 			break;
 			
 		default:
-			$displayText = "Sorry, I didn't get that. Please ask me something else.";
-			$speechText = "Sorry, I didn't get that. Please ask me something else.";
+			$speech = "Sorry, I didn't get that. Please ask me something else.";
 			break;	
 		}
 	
 	$response = new \stdClass();
-	$response->speech = $speechText;
-	$response->displayText = $displayText;
+	$response->speech = $speech;
+	$response->displayText = $speech;
 	$response->source = "webhook";
 	echo json_encode($response);
 }
