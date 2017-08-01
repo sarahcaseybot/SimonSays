@@ -25,7 +25,7 @@ if($method == "POST"){
 			$randomIndex = rand(0, 5);
 			$randomCommandIndex = rand(0, 19);
 			array_push($displayTextArray, " ", $array[$randomCommandIndex], ". ");
-			array_push($displayTextArray, "Uh oh... did you ", $array[$randomCommandIndex], "? If you did, you're out. ");
+			array_push($displayTextArray, "Oh no.. did you " . $array[$randomCommandIndex] . "? If you did, you're out. ");
 			array_push($displayTextArray, "Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], ". To end the game, say stop.");
 			
 			array_push($speechTextArray, " <break time=\"2s\"/> ", $array[$randomCommandIndex], ". ");
