@@ -28,6 +28,7 @@ if($method == "POST"){
 			array_push($displayTextArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
 
 			$displayText = implode("... ...", $displayTextArray);
+			$speech = implode("... ...", $displayTextArray);
 			break;
 			
 		case 'anything':
