@@ -14,9 +14,10 @@ if($method == "POST"){
 	$array = array("a", "b", "c", "d", "e", "f");
 	$fruitArray = array("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 	$displayTextArray = array("listen closely");
+	$speechTextArray= array("listen closely");
 	
 	for($x = 0; $x < $commandNum; $x++){
-	$randomIndex = rand(0, 5);
+		$randomIndex = rand(0, 5);
 		array_push($displayTextArray, "... ... ... ... ... ... ... ... ... ... Google Says...", $array[$randomIndex]); 
 	}
 	
@@ -27,8 +28,12 @@ if($method == "POST"){
 			array_push($displayTextArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
 			array_push($displayTextArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
 
+			array_push($speechTextArray, "... ... ... ... ... ... ... ...", $array[$randomIndex]);
+			array_push($speechTextArray, "... ... ... ... ... Uh Oh,... ... did you ...", $array[$randomIndex], "? ... ... If you did, ... ... you're out.");
+			array_push($speechTextArray, "... ... ... ... ... ... Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "... ... To end the game, say stop.");
+
 			$displayText = implode("... ...", $displayTextArray);
-			$speech = implode("... ...", $displayTextArray);
+			$speech = implode("... ...", $speechTextArray);
 			break;
 			
 		case 'anything':
