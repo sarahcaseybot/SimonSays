@@ -31,7 +31,7 @@ if($method == "POST"){
 			array_push($speechArray, "<break time=\"2s\"/> Uh Oh, <break time=\"1s\"/> did you ...", $array[$randomIndex], "? If you did, <break time=\"1s\"/> you're out.");
 			array_push($speechArray, "<break time=\"2s\"/> Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], "<break time=\"2s\"/> To end the game, say stop. </speak>");
 			
-			$displayText = implode("<break time=\"1s\"/>", $displayTextArray);
+			$displayText = implode("", $displayTextArray);
 			$speechText = implode("<break time=\"1s\"/>", $speechText);
 			break;
 			
