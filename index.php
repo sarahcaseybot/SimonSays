@@ -18,7 +18,8 @@ if($method == "POST"){
 	
 	for($x = 0; $x < $commandNum; $x++){
 		$randomIndex = rand(0, 5);
-		array_push($displayTextArray, "... ... ... ... ... ... ... ... ... ... Google Says...", $array[$randomIndex]); 
+		array_push($displayTextArray, "Google Says...", $array[$randomIndex], ", ");
+		array_push($speechTextArray, "... ... ... ... ... ... ... ... ... ... Google Says...", $array[$randomIndex]); 
 	}
 	
 	switch ($text){
