@@ -33,7 +33,7 @@ if($method == "POST"){
 			$concatString2 = "If you do, say" . $fruitArray[$randomIndex];
 			array_push($speechTextArray, " <break time=\"2s\"/> ", $array[$randomCommandIndex], ". ");
 			array_push($speechTextArray, $concatString );
-			array_push($speechTextArray, "<break time=\"2s\"/> Do you want to keep playing?, $concatString2, "<break time=\"1s\"/> To end the game, say stop. </speak>");
+			array_push($speechTextArray, "<break time=\"2s\"/> Do you want to keep playing?", $concatString2, "<break time=\"1s\"/> To end the game, say stop. </speak>");
 			$displayText = implode("", $displayTextArray);
 			$speech = implode("<break time=\"1s\"/>", $speechTextArray);
 			break;
