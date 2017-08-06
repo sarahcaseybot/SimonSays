@@ -9,13 +9,13 @@ if($method == "POST"){
 	
 	$commandNum = rand(2,9);
 	
-	$array = array("touch your toes", "pat your head", "rub your tummy", "twirl around", "blink your eyes", "hop on one foot", "touch your nose", "clap your hands", "raise your hands to the sky", "put your hands on your hips", "touch your shoulders", "give yourself a hug", "make a funny face", "stand on one foot", "cover your eyes", "jump in the air", "do a jumping jack", "clap your hands", "Do a dab", "touch your ears");
+	$array = array("touch your toes", "pat your head", "rub your tummy", "twirl around", "blink your eyes", "hop on one foot", "touch your nose", "clap your hands", "raise your hands to the sky", "put your hands on your hips", "touch your shoulders", "give yourself a hug", "make a funny face", "stand on one foot", "cover your eyes", "jump in the air", "do a jumping jack", "clap your hands", "Do a dab", "touch your ears", "shake your hips");
 	$fruitArray = array("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 	$displayTextArray = array("Listen closely. ");
 	$speechTextArray= array("<speak> Listen closely ");
 	
 	for($x = 0; $x < $commandNum; $x++){
-		$randomIndex = rand(0, 19);
+		$randomIndex = rand(0, 20);
 		array_push($displayTextArray, "Google Says... ", $array[$randomIndex], ", ");
 		array_push($speechTextArray, "<break time=\"1s\"/>  Google Says...", $array[$randomIndex], "."); 
 	}
