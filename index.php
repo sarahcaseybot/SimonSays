@@ -30,7 +30,7 @@ if($method == "POST"){
 	switch ($text){
 		case 'hi':
 			$randomIndex = rand(0, 5);
-			$randomCommandIndex = rand(0, 19);
+			$randomCommandIndex = rand(0, 20);
 			array_push($displayTextArray, " ", $array[$randomCommandIndex], ". ");
 			array_push($displayTextArray, "Oh no! Did you ", $array[$randomCommandIndex], "? If you did, you're out. ");
 			array_push($displayTextArray, "Do you want to keep playing? If you do, say ", $fruitArray[$randomIndex], ". To end the game, say stop.");
