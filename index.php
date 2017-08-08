@@ -13,11 +13,18 @@ if($method == "POST"){
 	$fruitArray = array("apple", "banana", "strawberry", "blueberry", "orange", "pineapple", "grapefruit", "lemon");
 	$displayTextArray = array("Listen closely. ");
 	$speechTextArray= array("<speak> Listen closely ");
+	$lastIndex;
 	
 	for($x = 0; $x < $commandNum; $x++){
 		$randomIndex = rand(0, 20);
+		if ($x == $commandNum - 1) {
+			while($randomIndex == $lastIndex) {
+				$randomIndex = rand(0, 20);
+			}
+		}
 		array_push($displayTextArray, "Google Says... ", $array[$randomIndex], ", ");
 		array_push($speechTextArray, "<break time=\"1s\"/>  Google Says...", $array[$randomIndex], "."); 
+		$lastIndex = $randomIndex;
 	}
 	
 	switch ($text){
