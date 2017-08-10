@@ -23,7 +23,7 @@ if($method == "POST"){
 			}
 		}
 		array_push($displayTextArray, "Google Says... ", $array[$randomIndex], ", ");
-		array_push($speechTextArray, "<break time=\"1s\"/>  Google Says...", $array[$randomIndex], "."); 
+		array_push($speechTextArray, "<break time=\"1s\"/>  Susie Says...", $array[$randomIndex], "."); 
 		$lastIndex = $randomIndex;
 	}
 	
