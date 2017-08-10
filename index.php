@@ -22,7 +22,7 @@ if($method == "POST"){
 				$randomIndex = rand(0, 20);
 			}
 		}
-		array_push($displayTextArray, "Google Says... ", $array[$randomIndex], ", ");
+		array_push($displayTextArray, "Susie Says... ", $array[$randomIndex], ", ");
 		array_push($speechTextArray, "<break time=\"1s\"/>  Susie Says...", $array[$randomIndex], "."); 
 		$lastIndex = $randomIndex;
 	}
