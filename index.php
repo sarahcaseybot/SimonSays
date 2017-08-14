@@ -33,11 +33,11 @@ if($method == "POST"){
 			$randomCommandIndex = rand(0, 20);
 			array_push($displayTextArray, " ", $array[$randomCommandIndex], ". ");
 			array_push($displayTextArray, "Oh no! Did you ", $array[$randomCommandIndex], "? If you did, you're out. ");
-			array_push($displayTextArray, "Do you want to keep playing? If you do, say apple", ". To end the game, say stop.");
+			array_push($displayTextArray, "Do you want to keep playing? If you do, say yip-dee-doo", ". To end the game, say stop.");
 			
 			$concatString = "<break time=\"2s\"/> Oh no! <break time=\"1s\"/> did you ... " . $array[$randomCommandIndex];
 			$concatString .= "? If you did, <break time=\"1s\"/> you're out.";
-			$concatString2 = "If you do, say apple.";
+			$concatString2 = "If you do, say yip-dee-doo.";
 			array_push($speechTextArray, " <break time=\"1s\"/> ", $array[$randomCommandIndex], ". ");
 			array_push($speechTextArray, $concatString );
 			array_push($speechTextArray, "<break time=\"1s\"/> Do you want to keep playing?", $concatString2, "<break time=\"1s\"/> To end the game, say stop. </speak>");
